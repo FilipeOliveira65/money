@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Money.t</title>
+        
+        <link rel="stylesheet" href="styles/initial.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        
+        <script src="js/spending.js" defer></script>
+        <script src="js/app.js" defer></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                <h1><a href="initial.html">Money.t</a></h1>
+                <p>(beta)</p>
+            </div>
+        </header>
+
+        <div id="dateBlock">
+            <p id="date"></p>
+        </div>
+
+        <div id="open">
+            <span class="material-symbols-outlined">
+                arrow_forward_ios
+            </span>
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="spendings.html">
+                        <span class="material-symbols-outlined">
+                            account_balance_wallet
+                        </span>
+                        Adicionar gasto
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-symbols-outlined menu-icon">
+                        arrow_split</span>
+                        Simulação de gastos  
+                        <span>(Em breve)</span>
+                    </a>
+                </li> 
+
+                <li>
+                    <a href="#">
+                        <span class="material-symbols-outlined menu-icon">
+                            settings
+                        </span>
+                        Configurações  
+                        <span>(Em breve)</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="material-symbols-outlined menu-icon">
+                            savings
+                        </span>
+                        Investimentos 
+                        <span>(Em breve)</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div id="close">
+                <span class="material-symbols-outlined" id="cls">
+                    arrow_back_ios
+                </span>
+            </div>
+
+        </nav>
+
+        <section class="initial" id="initial">
+            <h1 id="resume">Resumo:</h1>
+
+            <div class="principal" id="principal">
+
+                <div id="receiptsPopupArea">
+                    <div id="receiptsPopup">
+                        <span id="closeReceiptPopup">x</span>
+                        <form action="">
+                            <label for="newReceipt">Nova entrada:</label>
+                            <p id="important"><strong>Importante: </strong>Digite apenas o valor sem o "R$". Ex: 2,00</p>
+                            <input type="numeric" id="receiptInput">
+                            <span id="required">*Preenchimento obrigatório</span>
+                        </form>
+
+                        <button id="addReceipt">Adicionar</button>
+                    </div>
+                </div>
+
+                <div id="balance" class="detailsBlock">
+                    <p>Saldo:</p>
+        
+                    <p id="balanceValue"></p>
+        
+                    <button id="showDetails" class="btn-action">Mais detalhes</button>
+        
+                    <div id="details">
+                        <p id="title">Entradas: </p>
+                        <div id="detailment">
+                            <p>Entradas gerais*: </p>
+                            <p id="salary"></p>
+                            <span class="material-symbols-outlined" id="edit">
+                                edit
+                            </span>
+
+                            <span id="observation">*Valor corresponde a <strong>soma de todas as entradas computadas</strong></span>
+
+                        </div>
+
+                        <button id="lessDetails" class="btn-action">Ver menos</button>
+
+                    </div>
+                </div>
+        
+                <div id="spending" class="detailsBlock">
+                    <p>Gastos:</p>
+
+                    <p id="spendingValue"></p>
+                    
+                    <button id="showDetails" class="btn-action"><a href="spendings.html">Mais detalhes</a></button>
+                </div>
+            </div>
+            
+        </section>
+        
+
+    </body>
+</html>

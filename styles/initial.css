@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Lexend:wght@100..900&display=swap");
+* {
+  margin: 0;
+  font-family: "Lexend", serif;
+}
+
+:root {
+  --white-variation: #f9ffe4;
+  --dark-text-color: #1d1d1d;
+}
+
+body {
+  position: static;
+  background-color: var(--white-variation);
+  color: var(--dark-text-color);
+}
+
+header {
+  width: 90vw;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-text-color);
+  color: var(--white-variation);
+  border: 0px solid;
+  border-radius: 0 0 20px 0px;
+}
+header .logo {
+  font-family: "Abril Fatface", serif;
+  font-size: 20px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+header .logo a {
+  font-family: "Abril Fatface", serif !important;
+  text-decoration: none;
+  color: var(--white-variation);
+}
+header .logo p {
+  font-family: "Lexend", serif;
+  font-size: 15px;
+  position: relative;
+  bottom: 10px;
+  left: 5px;
+}
+
+#icon, #cls {
+  font-size: 30px;
+}
+
+#open {
+  height: 50px;
+  width: 25px;
+  position: fixed;
+  left: 0px;
+  top: 48vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 0 25px 25px 0;
+  background-color: #000;
+  z-index: 999;
+}
+
+nav {
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+}
+nav li {
+  margin: 50px 20px;
+  padding: 10px;
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.368627451);
+  display: flex;
+  align-items: center;
+  border: 0px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+nav li .menu-icon {
+  margin-right: 5px;
+}
+nav li a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+nav li span {
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 100;
+}
+nav li:hover {
+  all: 1s;
+  background-color: #fff;
+  color: #000;
+}
+nav li:hover a {
+  all: 1s;
+  text-decoration: none;
+  color: #000;
+}
+nav #close {
+  height: 50px;
+  position: relative;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 0 25px 25px 0;
+  background-color: #000;
+  z-index: 999;
+}
+nav #close span {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+button {
+  font-family: "Lexend", serif;
+  font-size: 15px;
+  font-weight: 800;
+  border: 0px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--dark-text-color);
+}
+button a {
+  color: #000;
+}
+
+.btn-action {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#dateBlock {
+  width: 15%;
+  max-width: 220px;
+  height: 30px;
+  margin-left: 5vw;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-text-color);
+  color: var(--white-variation);
+  border: 0px solid;
+  border-radius: 0 0 0px 15px;
+  font-size: 15px;
+}
+#dateBlock p {
+  font-family: "Anton", serif;
+  text-transform: uppercase;
+}
+
+.initial {
+  max-width: 100vw;
+  min-height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.initial h1 {
+  font-size: 50px;
+  font-family: "Anton", serif;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.initial .principal {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border: 0px solid;
+  border-radius: 25px;
+}
+.initial .principal #receiptsPopupArea {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4039215686);
+}
+.initial .principal #receiptsPopupArea #receiptsPopup {
+  min-height: 180px;
+  width: 50%;
+  max-width: 350px;
+  padding: 20px;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9ffe4;
+  border: 0px solid;
+  border-radius: 20px;
+}
+.initial .principal #receiptsPopupArea #receiptsPopup span {
+  position: relative;
+  top: 5px;
+  left: 45%;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.initial .principal #receiptsPopupArea #receiptsPopup form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.initial .principal #receiptsPopupArea #receiptsPopup form label {
+  font-weight: bold;
+}
+.initial .principal #receiptsPopupArea #receiptsPopup form #important {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.initial .principal #receiptsPopupArea #receiptsPopup form input {
+  height: 35px;
+  width: 95%;
+  padding: 5px;
+  background-color: #dddddd;
+  font-size: 15px;
+  border: 0px solid;
+  border-radius: 10px;
+}
+.initial .principal #receiptsPopupArea #receiptsPopup form #required {
+  display: none;
+  position: relative;
+  left: 0;
+  font-size: 12px;
+  color: #ff0000;
+}
+.initial .principal #receiptsPopupArea #receiptsPopup #addReceipt {
+  height: 40px;
+  width: 120px;
+  margin: 20px;
+  margin-bottom: 0;
+  background-color: #008000;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.initial .principal #receiptsPopupArea #receiptsPopup #addReceipt:hover {
+  background-color: #fff;
+  color: #008000;
+  border-width: 1px;
+  border-color: #008000;
+}
+.initial .principal .detailsBlock {
+  margin-right: 50px;
+}
+.initial .principal #balance {
+  width: 500px;
+  background-color: #92b8ff;
+}
+.initial .principal #balance #details {
+  width: 80%;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.368627451);
+  padding: 15px;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.initial .principal #balance #details #title {
+  margin-bottom: 10px;
+}
+.initial .principal #balance #details #detailment {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.initial .principal #balance #details #detailment p {
+  font-weight: bold;
+}
+.initial .principal #balance #details #detailment #salary, .initial .principal #balance #details #detailment #comission, .initial .principal #balance #details #detailment #others {
+  font-weight: 400;
+}
+.initial .principal #balance #details #detailment #edit {
+  background-color: rgba(255, 255, 255, 0.431372549);
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 20px;
+  border: 0px solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.initial .principal #balance #details #detailment #observation {
+  font-size: 12px;
+  color: #ff0000;
+}
+.initial .principal #balance #details p {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.initial .principal #balance #details #title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.initial #balance, .initial #spending, .initial #investments {
+  width: 30vw;
+  min-height: 110px;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: 400;
+}
+.initial #balance #balanceValue, .initial #balance #spendingValue, .initial #balance #investmentsValue, .initial #spending #balanceValue, .initial #spending #spendingValue, .initial #spending #investmentsValue, .initial #investments #balanceValue, .initial #investments #spendingValue, .initial #investments #investmentsValue {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.initial #spending {
+  height: 150px;
+}
+
+@media (max-width: 600px) {
+  nav #close {
+    left: 0px;
+    padding-left: 15px;
+    background-color: var(--white-variation);
+    color: #000;
+    border-radius: 25px 0 0 25px;
+  }
+  #dateBlock {
+    width: 50%;
+  }
+  .initial #resume {
+    font-size: 30px;
+  }
+  .initial .principal #balance, .initial .principal #spending {
+    width: 70vw;
+  }
+  .initial .principal #receiptsPopupArea #receiptsPopup form {
+    display: flex;
+    align-items: initial;
+    justify-content: initial;
+    text-align: initial;
+  }
+  .divisor {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  nav #close {
+    left: 0px;
+    padding-left: 15px;
+    background-color: var(--white-variation);
+    color: #000;
+    border-radius: 25px 0 0 25px;
+  }
+  #dateBlock {
+    width: 50%;
+  }
+  #initial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #initial #principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #initial #principal .detailsBlock {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  #initial #resume {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=initial.css.map */

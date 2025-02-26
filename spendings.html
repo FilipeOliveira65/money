@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Money.t - Detalhe de gastos</title>
+
+        <link rel="stylesheet" href="styles/spending.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <script src="js/app.js" defer></script>
+        <script src="js/spending.js" defer></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                <h1><a href="initial.html">Money.t</a></h1>
+                <p>(beta)</p>
+            </div>
+        </header>
+
+        <div id="open">
+            <span class="material-symbols-outlined" id="icon">
+                arrow_forward_ios
+            </span>
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="initial.html">
+                        <span class="material-symbols-outlined">
+                            home
+                        </span>
+                        Tela inicial
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-symbols-outlined menu-icon">
+                        arrow_split</span>
+                        Simulação de gastos  
+                        <span>(Em breve)</span>
+                    </a>
+                </li> 
+
+                <li>
+                    <a href="#">
+                        <span class="material-symbols-outlined menu-icon">
+                            settings
+                        </span>
+                        Configurações  
+                        <span>(Em breve)</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="material-symbols-outlined menu-icon">
+                            savings
+                        </span>
+                        Investimentos 
+                        <span>(Em breve)</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div id="close">
+                <span class="material-symbols-outlined" id="cls">
+                    arrow_back_ios
+                </span>
+            </div>
+
+        </nav>
+
+        <div id="dateBlock">
+            <p id="date">Segunda, 27 de janeiro de 2025</p>
+        </div>
+
+        <div id="popupArea">
+            <div id="detailPopup">
+                <h1>Nova despesa</h1>
+
+                <div id="space"></div>
+
+                <form action="" id="newExpense">
+                    <label for="expense-name">Despesa:</label>
+                    <input type="text" id="expense-name" placeholder="Ex: Compra mensal">
+
+                    <label for="expense-date">Data:</label>
+                    <input type="numeric" name="" id="expense-date" placeholder="Digite apenas o dia">
+
+                    <label for="month">Mês:</label>
+                    <select name="" id="month">
+                        <option value="select">Selecione o mês</option>
+                        <option value="janeiro">Janeiro</option>
+                        <option value="Fevereiro">Fevereiro</option>
+                        <option value="Março">Março</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Maio">Maio</option>
+                        <option value="Junho">Junho</option>
+                        <option value="Julho">Julho</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Setembro">Setembro</option>
+                        <option value="Outubro">Outubro</option>
+                        <option value="Novembro">Novembro</option>
+                        <option value="Dezembro">Dezembro</option>
+                    </select>
+
+                    <label for="expense-category">Categoria:</label>
+                    <select name="" id="expense-category">
+                        <option value="select">Selecione uma categoria</option>
+                        <option value="Casa">Casa</option>
+                        <option value="Alimentação">Alimentação</option>
+                        <option value="Lazer">Lazer</option>
+                        <option value="Educação">Educação</option>
+                        <option value="Roupas/Calçados">Roupas/Calçados</option>
+                        <option value="Presentes">Presentes</option>
+                        <option value="Gasto emergencial">Gasto emergencial</option>
+                        <option value="Transporte">Transporte</option>
+                        <option value="Pessoal">Pessoal</option>
+                    </select>
+
+                    <label for="payment-method">Forma de pagamento:</label>
+                    <select name="" id="payment-method">
+                        <option value="select">Selecione</option>
+                        <option value="Débito">Débito</option>
+                        <option value="Crédito">Crédito</option>
+                        <option value="Pix">Pix</option>
+                        <option value="Dinheiro">Dinheiro vivo</option>
+                        <option value="Outro">Outros</option>
+                    </select>
+
+                    <label for="price">Valor:</label>
+                    <input type="numeric" id="expense-price">
+                </form>
+
+                <div id="space"></div>
+
+                <div id="form-actions">
+                    <button id="cancel">Cancelar</button>
+                    <button id="send">Lançar</button>
+                </div>
+            </div>         
+        </div>
+
+        <div id="warningPopupArea">
+            <div id="warningPopup">
+                <p>Oops, você precisa preencher todas as informações ;)</p>
+
+                <button id="closeWarnPop">Ok</button>
+            </div>
+        </div>
+
+        <section class="initial" id="initial">
+            <h1 id="resume">Detalhamento de gastos:</h1>
+
+            <div class="principal" id="principal">
+
+                <div class="det-area" id="det-area">
+
+                    <div class="total-area" id="total-area">
+
+                        <h1>Gasto</h1>
+                        
+                        <p id="total"></p>
+                    </div>
+    
+                    <div class="calendar" id="calendar">
+                        <h1 id="currentMonth"></h1>
+
+                        <div id="expensesDash"></div>
+    
+                        <button id="new-expense"> + Adicionar gasto</button>
+    
+                    </div>
+
+                    <div class="divisor"></div>
+                </div>
+
+
+            </div>
+
+
+            <!-- the function below has been temporarily disabled until the incompatibility is resolved -->
+             
+            <!-- <div class="newPeriod" id="newPeriod">
+                <span class="material-symbols-outlined" id="icon">
+                    add
+                </span>
+
+                <span id="periodTag">Criar nova sessão</span>
+            </div> -->
+            
+        </section>
+        
+    </body>
+</html>

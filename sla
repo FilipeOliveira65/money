@@ -1,0 +1,3 @@
+var calendarExist = localStorage.getItem("calendar");
+
+calendarExist === null
